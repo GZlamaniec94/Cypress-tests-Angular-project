@@ -1,0 +1,39 @@
+{
+  "articles": [
+    {
+      "slug": "UNique-is-best-but-delete-it-after-1850",
+      "title": "Title 1",
+      "description": "This is a description",
+      "body": "This is the body of the article",
+      "tagList": [],
+      "createdAt": "2022-09-26T14:17:14.511Z",
+      "updatedAt": "2022-09-26T14:17:14.511Z",
+      "favorited": false,
+      "favoritesCount": 1,
+      "author": {
+        "username": "CY Tester",
+        "bio": "knsdsadsdsadas",
+        "image": "knsdsadsdsadas",
+        "following": false
+      }
+    },
+    {
+      "slug": "Request-from-API-mb3-1850",
+      "title": "Title 1",
+      "description": "API testing is easy",
+      "body": "Angular is cool",
+      "tagList": [],
+      "createdAt": "2022-09-25T20:39:38.492Z",
+      "updatedAt": "2022-09-25T20:39:38.492Z",
+      "favorited": false,
+      "favoritesCount": 5,
+      "author": {
+        "username": "CY Tester",
+        "bio": "knsdsadsdsadas",
+        "image": "knsdsadsdsadas",
+        "following": false
+      }
+    }
+  ],
+  "articlesCount": 2500
+}
