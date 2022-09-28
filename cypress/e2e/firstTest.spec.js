@@ -6,7 +6,7 @@ describe('Test', () => {
   })
 
   it('verify correct request and response', () => {
-    cy.intercept('POST', 'https://api.realworld.io/api/articles/').as('postArticles')
+    cy.intercept('POST', Cypress.env('apiUrl')+'articles/').as('postArticles')
 
     cy.contains('New Article').click()
     cy.get('[ng-reflect-name="title"]').type('Title12345')
@@ -27,8 +27,8 @@ describe('Test', () => {
   });
 
   it('verify global feed likes count', () => {
-    cy.intercept('GET', 'https://api.realworld.io/api/articles/feed*', {"articles":[],"articlesCount":0})
-    cy.intercept('GET', 'https://api.realworld.io/api/articles*', { fixture: 'articles.json'})
+    cy.intercept('GET', Cypress.env('apiUrl')+'articles/feed*', {"articles":[],"articlesCount":0})
+    cy.intercept('GET', Cypress.env('apiUrl')+'articles*', { fixture: 'articles.json'})
 
     cy.contains('Global Feed').click()
     cy.get('app-article-list button').then( heartList =>{
@@ -39,7 +39,7 @@ describe('Test', () => {
     cy.fixture('articles').then( file => {
       const articleSlug =  file.articles[1].slug
       file.articles[1].favoritesCount = 6
-      cy.intercept('POST', 'https://api.realworld.io/api/articles/'+articleSlug+'/favorite', file)
+      cy.intercept('POST', Cypress.env('apiUrl')+'articles/'+articleSlug+'/favorite', file)
     })
 
     cy.get('app-article-list button').eq(1).click().should('contain', '6')
@@ -47,11 +47,11 @@ describe('Test', () => {
 
   it('intercepting and modifying the request and response', () => {
 
-    // cy.intercept('POST', 'https://api.realworld.io/api/articles/', (req)=>{
+    // cy.intercept('POST', Cypress.env('apiUrl')+'/articles/', (req)=>{
     //   req.body.article.description = 'This is description 2'
     // }).as('postArticles')
 
-    cy.intercept('POST', 'https://api.realworld.io/api/articles/', (req)=>{
+    cy.intercept('POST', Cypress.env('apiUrl')+'articles/', (req)=>{
       req.reply( res => {
         expect(res.body.article.description).to.equal('This is description')
         res.body.article.description = 'This is description 2'
@@ -86,7 +86,7 @@ describe('Test', () => {
     cy.get('@token').then( token =>{
 
       cy.request({
-        url: 'https://api.realworld.io/api/articles/',
+        url: Cypress.env('apiUrl')+'articles/',
         headers: {'Authorization': 'Token '+token},
         method: 'POST',
         body: bodyRequest
@@ -99,7 +99,7 @@ describe('Test', () => {
       cy.get('.article-actions').contains('Delete Article').click()
       cy.wait(1000)
       cy.request({
-        url: 'https://api.realworld.io/api/articles?limit=10&offset=0',
+        url: Cypress.env('apiUrl')+'articles?limit=10&offset=0',
         headers: {'Authorization': 'Token '+token},
         method: 'GET'
       }).its('body').then( body =>{
