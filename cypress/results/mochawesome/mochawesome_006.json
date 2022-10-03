@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-30T15:25:58.887Z",
+    "end": "2022-09-30T15:26:01.213Z",
+    "duration": 2326,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cd9cce42-23f2-4639-be68-37aeee0f6a4a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\snapshots.spec.js",
+      "file": "cypress\\e2e\\snapshots.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ade74097-b18e-447a-9dce-3a1165741620",
+          "title": "snapshots",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test Percy",
+              "fullTitle": "snapshots test Percy",
+              "timedOut": null,
+              "duration": 2286,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.sidebar').then(sideBar => {\n  cy.wait(1000);\n});",
+              "err": {},
+              "uuid": "5d1795d6-b115-4365-b146-4bd81e470832",
+              "parentUUID": "ade74097-b18e-447a-9dce-3a1165741620",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5d1795d6-b115-4365-b146-4bd81e470832"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2286,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

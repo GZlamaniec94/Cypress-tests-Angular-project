@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="8.5240" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-09-30T15:22:35" tests="0" file="cypress\e2e\firstTest.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Test" timestamp="2022-09-30T15:22:35" tests="1" time="8.4850" failures="0">
+    <testcase name="Test delete new article in global feed" time="8.3980" classname="delete new article in global feed">
+    </testcase>
+  </testsuite>
+</testsuites>

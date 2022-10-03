@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-30T15:39:02.991Z",
+    "end": "2022-09-30T15:39:06.232Z",
+    "duration": 3241,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2ed78402-ef47-474e-845f-9741e581f945",
+      "title": "",
+      "fullFile": "cypress\\e2e\\snapshots.spec.js",
+      "file": "cypress\\e2e\\snapshots.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e4ff2cd2-8503-4687-8ded-200ad95a68c2",
+          "title": "snapshots",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test Percy",
+              "fullTitle": "snapshots test Percy",
+              "timedOut": null,
+              "duration": 3179,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('.sidebar').then(sideBar => {\n  cy.wait(1000);\n  cy.percySnapshot('tagList');\n});",
+              "err": {},
+              "uuid": "dd918dd2-0a1f-4fef-b704-6a9dee6e5fd2",
+              "parentUUID": "e4ff2cd2-8503-4687-8ded-200ad95a68c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dd918dd2-0a1f-4fef-b704-6a9dee6e5fd2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3179,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
